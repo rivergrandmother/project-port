@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="#gallery" class="nav-link">Work</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="gallery">
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Artwork cards are injected from artworks.js -->
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>About</h2>
+          <p>
+            Welcome to my studio. I work across painting, drawing, and mixed media,
+            exploring texture, light, and the quiet spaces between things.
+          </p>
+          <p>
+            Each piece begins as a feeling or a fragment — something half-remembered,
+            half-imagined — and finds its way onto paper or canvas through slow,
+            deliberate marks.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a href="mailto:artist@example.com">Email</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026</p>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&lsaquo;</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next">&rsaquo;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+      <div class="lightbox-info" id="lightbox-info"></div>
+    </div>
+  </div>
+
+  <script src="artworks.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
