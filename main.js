@@ -1,4 +1,11 @@
 (() => {
+  // ── Banner dismiss ──
+  const banner = document.getElementById("banner");
+  const bannerClose = document.getElementById("banner-close");
+  bannerClose.addEventListener("click", () => {
+    banner.classList.add("hidden");
+  });
+
   const grid = document.getElementById("gallery-grid");
   const lightbox = document.getElementById("lightbox");
   const lbImg = document.getElementById("lightbox-img");
