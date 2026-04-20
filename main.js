@@ -77,6 +77,10 @@
       const card = document.createElement("div");
       card.className = "artwork-card";
 
+      if (artwork.featured) {
+        card.classList.add("featured");
+      }
+
       const img = document.createElement("img");
       img.src = artwork.src;
       img.alt = artwork.title || "Artwork";
@@ -97,7 +101,7 @@
       if (metaParts.length) {
         const meta = document.createElement("div");
         meta.className = "card-meta";
-        meta.textContent = metaParts.join(" \u2022 ");
+        meta.textContent = metaParts.join(" • ");
         overlay.appendChild(meta);
       }
 
@@ -131,7 +135,7 @@
     if (artwork.title) {
       html += `<div class="lb-title">${artwork.title}</div>`;
     }
-    const meta = [artwork.year, artwork.medium].filter(Boolean).join(" \u2022 ");
+    const meta = [artwork.year, artwork.medium].filter(Boolean).join(" • ");
     if (meta) {
       html += `<div class="lb-meta">${meta}</div>`;
     }

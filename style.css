@@ -114,13 +114,13 @@ nav {
 }
 
 .gallery-grid {
-  columns: 3 320px;
-  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  align-items: start;
 }
 
 .artwork-card {
-  break-inside: avoid;
-  margin-bottom: 1.5rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
@@ -135,6 +135,13 @@ nav {
 
 .artwork-card:hover img {
   transform: scale(1.02);
+}
+
+/* Featured image: larger and centered */
+.artwork-card.featured {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: min(520px, 90vw);
 }
 
 .artwork-card .card-overlay {
@@ -377,12 +384,13 @@ footer {
   }
 
   .gallery-grid {
-    columns: 2 160px;
-    column-gap: 0.75rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
   }
 
-  .artwork-card {
-    margin-bottom: 0.75rem;
+  .artwork-card.featured {
+    grid-column: 1 / -1;
+    width: min(100%, 700px);
   }
 
   .artwork-card .card-overlay {
@@ -407,6 +415,10 @@ footer {
 
 @media (max-width: 480px) {
   .gallery-grid {
-    columns: 1;
+    grid-template-columns: 1fr;
+  }
+
+  .artwork-card.featured {
+    width: 100%;
   }
 }
