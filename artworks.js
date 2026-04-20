@@ -16,20 +16,20 @@
  */
 
 const ARTWORKS = [
-  {
-    src: "images/colours-brown.jpg",
-    title: "brown",
-    year: "2025",
-    medium: "Oil pastel on paper",
-    category: "colours"
-  },
-    {
-    src: "images/colours-grey.jpg",
-    title: "grey",
-    year: "2025",
-    medium: "Oil pastel on paper",
-    category: "colours"
-  },
+  // {
+  //   src: "images/colours-brown.jpg",
+  //   title: "brown",
+  //   year: "2025",
+  //   medium: "Oil pastel on paper",
+  //   category: "colours"
+  // },
+  //   {
+  //   src: "images/colours-grey.jpg",
+  //   title: "grey",
+  //   year: "2025",
+  //   medium: "Oil pastel on paper",
+  //   category: "colours"
+  // },
       {
     src: "images/colours-orange.jpg",
     title: "orange",
@@ -38,55 +38,55 @@ const ARTWORKS = [
     category: "colours",
     featured: true,
   },
-        {
-    src: "images/colours-yellow.jpg",
-    title: "yellow",
-    year: "2025",
-    medium: "Oil pastel on paper",
-    category: "colours",
-    featured: true,
-  },
-  {
-    src: "images/lines-chair.jpg",
-    title: "Chair Study",
-    year: "2025",
-    medium: "Ink on paper",
-    category: "lines",
-  },
-  {
-    src: "images/lines-4chairs.jpg",
-    title: "Four Chairs",
-    year: "2025",
-    medium: "Ink on paper",
-    category: "lines",
-  },
-  {
-    src: "images/lines-light-house.jpg",
-    title: "Light House",
-    year: "2025",
-    medium: "Ink on paper",
-    category: "lines",
-  },
-  {
-    src: "images/lines-person-sit.jpg",
-    title: "Person Sitting",
-    year: "2025",
-    medium: "Ink on paper",
-    category: "lines",
-  },
-    {
-    src: "images/lines-sea.jpg",
-    title: "Sea View",
-    year: "2025",
-    medium: "Ink on paper",
-    category: "lines",
-  },
-  {
-    src: "images/lines-sea-2.jpg",
-    title: "Sea View",
-    year: "2025",
-    medium: "Ink on paper",
-    category: "lines",
-  },
+  //       {
+  //   src: "images/colours-yellow.jpg",
+  //   title: "yellow",
+  //   year: "2025",
+  //   medium: "Oil pastel on paper",
+  //   category: "colours",
+  //   featured: true,
+  // },
+  // {
+  //   src: "images/lines-chair.jpg",
+  //   title: "Chair Study",
+  //   year: "2025",
+  //   medium: "Ink on paper",
+  //   category: "lines",
+  // },
+  // {
+  //   src: "images/lines-4chairs.jpg",
+  //   title: "Four Chairs",
+  //   year: "2025",
+  //   medium: "Ink on paper",
+  //   category: "lines",
+  // },
+  // {
+  //   src: "images/lines-light-house.jpg",
+  //   title: "Light House",
+  //   year: "2025",
+  //   medium: "Ink on paper",
+  //   category: "lines",
+  // },
+  // {
+  //   src: "images/lines-person-sit.jpg",
+  //   title: "Person Sitting",
+  //   year: "2025",
+  //   medium: "Ink on paper",
+  //   category: "lines",
+  // },
+  //   {
+  //   src: "images/lines-sea.jpg",
+  //   title: "Sea View",
+  //   year: "2025",
+  //   medium: "Ink on paper",
+  //   category: "lines",
+  // },
+  // {
+  //   src: "images/lines-sea-2.jpg",
+  //   title: "Sea View",
+  //   year: "2025",
+  //   medium: "Ink on paper",
+  //   category: "lines",
+  // },
 ];
 
