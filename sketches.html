@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketches — River Grandmother</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html#gallery" class="nav-link">Work</a>
+      <a href="index.html#about" class="nav-link">About</a>
+      <span class="nav-link" style="color:var(--text)">Sketches</span>
+      <a href="https://essays.rivergrandmother.com/" class="nav-link">Riverbank</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="sketches">
+      <div class="sketches-viewer">
+        <button class="viewer-btn viewer-prev" id="viewer-prev" aria-label="Previous">&lsaquo;</button>
+        <div class="viewer-stage">
+          <img id="viewer-img" src="" alt="">
+          <div class="viewer-info" id="viewer-info"></div>
+        </div>
+        <button class="viewer-btn viewer-next" id="viewer-next" aria-label="Next">&rsaquo;</button>
+      </div>
+      <div class="viewer-dots" id="viewer-dots"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>River Grandmother &copy; 2026</p>
+  </footer>
+
+  <script src="artworks.js"></script>
+  <script>
+    (() => {
+      let sketchIndex = 0;
+
+      function initSketchViewer() {
+        if (!SKETCHES.length) return;
+
+        const dotsContainer = document.getElementById("viewer-dots");
+        SKETCHES.forEach((_, i) => {
+          const dot = document.createElement("span");
+          dot.className = "dot" + (i === 0 ? " active" : "");
+          dot.addEventListener("click", () => showSketch(i));
+          dotsContainer.appendChild(dot);
+        });
+
+        document.getElementById("viewer-prev").addEventListener("click", () => navigateSketch(-1));
+        document.getElementById("viewer-next").addEventListener("click", () => navigateSketch(1));
+
+        document.getElementById("viewer-img").addEventListener("contextmenu", (e) => e.preventDefault());
+
+        showSketch(0);
+      }
+
+      function showSketch(index) {
+        sketchIndex = index;
+        const artwork = SKETCHES[index];
+        const img = document.getElementById("viewer-img");
+        img.style.opacity = "0";
+        setTimeout(() => {
+          img.src = artwork.src;
+          img.alt = artwork.title || "Sketch";
+          img.style.opacity = "1";
+        }, 150);
+
+        const info = document.getElementById("viewer-info");
+        const parts = [artwork.title, artwork.year, artwork.medium].filter(Boolean);
+        info.textContent = parts.join(" \u2022 ");
+
+        document.querySelectorAll(".dot").forEach((d, i) => {
+          d.classList.toggle("active", i === index);
+        });
+      }
+
+      function navigateSketch(dir) {
+        const next = (sketchIndex + dir + SKETCHES.length) % SKETCHES.length;
+        showSketch(next);
+      }
+
+      initSketchViewer();
+    })();
+  </script>
+</body>
+</html>

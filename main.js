@@ -85,6 +85,7 @@
       img.src = artwork.src;
       img.alt = artwork.title || "Artwork";
       img.loading = "lazy";
+      img.addEventListener("contextmenu", (e) => e.preventDefault());
       card.appendChild(img);
 
       const overlay = document.createElement("div");
@@ -153,6 +154,8 @@
   document.getElementById("lightbox-close").addEventListener("click", closeLightbox);
   document.getElementById("lightbox-prev").addEventListener("click", () => navigate(-1));
   document.getElementById("lightbox-next").addEventListener("click", () => navigate(1));
+
+  lbImg.addEventListener("contextmenu", (e) => e.preventDefault());
 
   lightbox.addEventListener("click", (e) => {
     if (e.target === lightbox) closeLightbox();
